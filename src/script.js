@@ -37,3 +37,52 @@ function fight(player1, player2, player1Health, player2Health) {
 }
 
 fight("Goober", "Ant", 100, 100);
+
+
+//extended challenge
+
+console.log("* * * * * * * * * * * * * * * * * * * * *");
+
+function getGrade(num) {
+    if (num >= 90) {
+        return (`Score: ${num} Grade: A`)
+    } else if (num < 90 && num >= 80) {
+        return (`Score: ${num} Grade: B`)
+    } else if (num < 80 && num >= 70) {
+        return (`Score: ${num} Grade: C`)
+    } else if (num < 70 && num >= 60) {
+        return (`Score: ${num} Grade: D`)
+    } else {
+        return (`Score: ${num} Grade: F`)
+    } 
+}
+
+console.log(getGrade(89));
+
+
+function prioritize(urgent, important) {
+    if (urgent === true && important === true) {
+        return (`urgent & important → 1`);
+    } else if (urgent !== true && important === true) {
+        return (`important not urgent → 2`);
+    } else if (urgent === true && important !== true) {
+        return (`urgent not important → 3`);
+    } else {
+        return (`neither urgent nor important → 4`);
+    }
+}
+
+console.log(prioritize(true, false));
+
+function calculatePay(wage, hours) {
+    const overTime = (wage * hours) + (hours - 40) * (wage * 0.50);
+    const weeklyWage = wage * hours;
+    if (hours <= 40) {
+       return (`Your weekly pay is $${weeklyWage}`); 
+    } else {
+        return (`Your weekly pay is $${overTime}`);
+    }
+    
+}
+
+console.log(calculatePay(12, 60));
