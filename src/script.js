@@ -7,7 +7,7 @@ const chooseOption = (opt1, opt2) => {
     return randNum;
 }
     
-function attackPlayer(health) {
+const attackPlayer = function(health) {
     return health - randomDamage();
 }
 
@@ -85,4 +85,4 @@ function calculatePay(wage, hours) {
     
 }
 
-console.log(calculatePay(12, 60));
+console.log(calculatePay(12, 50));
